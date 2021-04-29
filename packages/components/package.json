@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "dependencies": {
+    "@app/nft": "*",
+    "@truffle/contract": "^4.3.14",
     "node-fetch": "^2.6.1",
     "react": "*",
     "web3": "^1.3.5"
