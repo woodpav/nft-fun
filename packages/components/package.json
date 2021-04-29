@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "dependencies": {
+    "node-fetch": "^2.6.1",
     "react": "*"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.10"
   }
 }

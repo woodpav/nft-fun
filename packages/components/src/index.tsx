@@ -1,7 +1,30 @@
 import React from 'react';
 
-const App = ({ greeting }: { greeting?: string }) => (
-  <div>{`Hello ${greeting || 'world'}`}</div>
+import { uploadFile } from './pinata';
+
+const ImageUpload: React.FC = () => (
+  <input
+    type="file"
+    accept="image/*"
+    onChange={e => {
+      const { files } = e.target;
+      if (files && files?.length > 0) {
+        uploadFile(files[0], {
+          name: 'testname',
+          keyvalues: {
+            exampleKey: 'exampleValue'
+          }
+        }).then(data => {
+          console.log(data)
+        });
+      }
+    }} />
+)
+
+const App: React.FC = () => (
+  <div>
+    <ImageUpload />
+  </div>
 );
 
 export default App;
